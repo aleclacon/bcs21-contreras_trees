@@ -1,0 +1,118 @@
+trees 
+    data structure, data items are connected using reference
+    hierarchial manner( form: edges and nodes)
+Parts of a Tree Data Structure:
+    Root Node
+        topmost, always first node
+        access each element starting from root node
+    Internal Node
+        parent node
+        parent of any node, node references current node
+    Child Node
+        nodes which parent nodes are pointing using references
+    Edge 
+        reference, parent node connected to a child node
+    External (leaf) Node
+        have no children
+    Siblings
+        node/children of same parent
+    Ancestors
+        all nodes from end to top
+    Decendants
+        all nodes of subtree
+    non leaf/ non termnial node
+         atleast one children or decendant
+    degree of a trees
+            number of subtrees of a node
+    weight of a tree
+        number of leaf nodes
+    level of a node
+        node's distance from root
+    depth
+         total number of edges
+    path (length of the path)
+        total number of nodes in path
+    height
+        total number of edges from leaf node 
+        from particular node
+
+
+
+
+
+ 		    a -----> level 0, depth is 0, height is 3
+		 /    \
+		 b     c -----> level 1, depth is 1, height is 2
+		/\ \   \
+	    d e f   g ----> level 2, depth is 2, height is 1
+       /
+       i          ----> level 3, depth is 3, height is 0
+
+    path from root to i = a -> b -> c -> i
+    path from c to g = c -> g
+    path from b to c = b -> c
+
+
+
+root: a
+parent: abc
+children: bcdefg
+internal: bc
+leaf node: defg
+siblings: bc, def
+ancestors of c: ba
+decendants of a: bc
+nonleaf: bc 
+degree of tree: 2
+weight of a tree: 4
+level of a node: level 2
+
+231123 - Mini Activity (Tree)
+root: 5
+parent: 5, 20, 45
+children: 20, 45, 11, 46, 15, 30, 78
+internal: 20, 45
+leaf node: 11, 45, 15, 30, 78
+siblings: def
+
+231123 - Mini Activity (Tree2)
+Identify the following:
+Siblings:20 45, 11 46 15, 30 78
+Ancestors: 5
+Descendants: 20, 45, 11, 46, 15, 30, 78
+Non-Leaf/Non-Terminal: 5, 20, 45
+Degree of the tree: 2
+Weight of a tree: 5
+Level of a node: 2
+
+Tree Representation
+    List Representation 
+    Left Child- Right Child sibling representation
+
+
+ 		    a 
+		 /    \
+		 b     c 
+		/\ \   \
+	    d e f   g 
+       /
+       i       
+       tree with 8 nodes and 7 edges
+        any tree with N nodes there will be maximum of 'N-1' edges
+        a tree every individual element is called 'Node'
+
+List Representation
+    use 2 types of nodes:
+        Data Node
+        Reference Node
+
+        A --> B --> C --> D --> I --> 0
+        |    |--> E --> 0
+        |    |--> F --> 0
+        C --> G --> 0
+
+Left Child - Right Sibling Representation
+    Data
+    /    \
+Left    Right
+Child   Sibling
